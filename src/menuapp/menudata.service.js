@@ -12,7 +12,7 @@
         service.getItemsForCategory = function (categoryByShortName) {
        
             var deferred = $q.defer();
-            $http.get('http://davids-restaurant.herokuapp.com/menu_items.json', 
+            $http.get('https://davids-restaurant.herokuapp.com/menu_items.json', 
                 {
                     params:{category: categoryByShortName}
                 }
@@ -35,7 +35,7 @@
         service.getAllCategories = function () {
 
             var deferred = $q.defer();
-            $http.get( "http://davids-restaurant.herokuapp.com/categories.json")
+            $http.get( "https://davids-restaurant.herokuapp.com/categories.json")
             .success(function(data) {
                 service.items = data;
                 // Wait 2 seconds before returning
